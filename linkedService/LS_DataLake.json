@@ -1,0 +1,10 @@
+{
+	"name": "LS_DataLake",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sacaresyncyash.dfs.core.windows.net/"
+		}
+	}
+}
