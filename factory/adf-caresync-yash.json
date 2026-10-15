@@ -1,0 +1,15 @@
+{
+	"name": "adf-caresync-yash",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "indiasouthcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "025ce230-70ec-42a0-94c0-ef9ed8547337",
+		"tenantId": "6665d730-77e7-4df5-b873-6564d3658621"
+	}
+}
