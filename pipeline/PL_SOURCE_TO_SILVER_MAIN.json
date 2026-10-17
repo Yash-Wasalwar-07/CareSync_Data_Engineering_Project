@@ -61,8 +61,37 @@
 							"typeProperties": {
 								"variableName": "table_id",
 								"value": {
-									"value": "@item().table_id",
+									"value": "@string(item().table_id)",
 									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Inner Pipeline",
+							"type": "ExecutePipeline",
+							"dependsOn": [
+								{
+									"activity": "table_id received",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "PL_SOURCE_TO_SILVER_INNER",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"param_table_id": {
+										"value": "@item().table_id",
+										"type": "Expression"
+									}
 								}
 							}
 						}
