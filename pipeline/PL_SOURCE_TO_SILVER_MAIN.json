@@ -44,6 +44,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Read metadata table values').output.value",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "table_id received",
