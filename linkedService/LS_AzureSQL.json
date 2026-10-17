@@ -1,0 +1,23 @@
+{
+	"name": "LS_AzureSQL",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "caresyncyash.database.windows.net",
+			"database": "free-sql-db-2032493",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Yash",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_KeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresql-password"
+			}
+		}
+	}
+}
